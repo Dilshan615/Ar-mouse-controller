@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive AR Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- MediaPipe Web SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="/assets/index-DdLHOjrs.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C05aRP0g.css">
+  </head>
+  <body>
+    <!-- Webcam Live Preview Canvas (Full Screen Background) -->
+    <canvas id="webcam-preview"></canvas>
+    
+    <!-- Diagnostic Terminal Window (Docked Full Height) -->
+    <div class="terminal-log-container">
+      <div class="terminal-header">
+        <span class="terminal-dot"></span>
+        SYSTEM_DIAGNOSTICS.SYS
+      </div>
+      
+      <!-- Picture-in-Picture Webcam Preview -->
+      <div class="terminal-video-wrapper">
+        <video id="webcam" autoplay playsinline></video>
+        <div class="video-overlay-grid"></div>
+        <div class="video-overlay-scanning">RECORDING</div>
+      </div>
+      
+      <!-- Sci-fi Time & Date Panel -->
+      <div class="terminal-clock-panel">
+        <div class="clock-item">
+          <span class="clock-label">SYS_TIME:</span>
+          <span class="clock-value" id="sys-time">00:00:00</span>
+        </div>
+        <div class="clock-item">
+          <span class="clock-label">SYS_DATE:</span>
+          <span class="clock-value" id="sys-date">2026-07-12</span>
+        </div>
+      </div>
+
+      <div class="terminal-body" id="terminal-logs">
+        <!-- Logs will be appended here -->
+      </div>
+    </div>
+
+    <!-- Futuristic UI Overlay -->
+    <div id="ui-container">
+      <div class="scanner-line"></div>
+      <div class="top-bar">
+        <div class="status">
+          <span class="dot"></span>
+          TRACKING ACTIVE
+        </div>
+        <div class="frame-info">
+          FPS: <span id="fps-counter">0</span> | MODE: <span id="mode-display">ORGANIC</span>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="controls">
+          <div class="track-info">
+            <h4>CURRENT ASSET</h4>
+            <p id="asset-name">Blooming Flower</p>
+          </div>
+          <div class="range-limits">
+            BOUNDING BOX SCALE
+            <div class="progress-bar">
+              <div class="progress-fill" id="scale-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
