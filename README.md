@@ -1,5 +1,7 @@
 # Interactive AR Gesture Mouse Controller
 
+> **Note:** This project is currently in its initial stage of development (Alpha). Features and stability are actively being improved.
+
 This project is an Augmented Reality (AR) application that allows you to control your computer's mouse cursor using hand tracking via a webcam. It uses the MediaPipe SDK to track hand gestures and a Python backend script to control the mouse system-wide. The application features a futuristic, sci-fi inspired user interface.
 
 ## Project Summary
