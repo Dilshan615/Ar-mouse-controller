@@ -20,15 +20,24 @@ The system consists of two main components:
 
 To run this project, you need to have both **Node.js** and **Python** installed on your computer.
 
-### 1. Frontend Setup (Node.js)
-Open your terminal or command prompt, navigate to the `frontend` folder, and run the following command to install the required packages:
+### Prerequisites (What you need to install first)
+1. **Node.js**: Required to run the frontend application. 
+   - Download it from [https://nodejs.org/](https://nodejs.org/) (The LTS version is recommended).
+   - After installing, open a terminal and run `node -v` and `npm -v` to verify the installation.
+2. **Python (version 3.7 or higher)**: Required to run the backend gesture controller script.
+   - Download it from [https://www.python.org/downloads/](https://www.python.org/downloads/).
+   - **Important for Windows Users:** During installation, make sure to check the box that says **"Add Python to PATH"**.
+   - After installing, open a terminal and run `python --version` to verify the installation.
+
+### 1. Frontend Setup (Node.js Dependencies)
+Open your terminal or command prompt, navigate to the `frontend` folder (where the `package.json` file is located), and run the following command to install the required packages:
 ```bash
 npm install
 ```
-*(This will install dependencies like Three.js, Socket.io, and Vite from the package.json file.)*
+*(This will automatically download and install dependencies like Three.js, Socket.io, and Vite into a `node_modules` folder.)*
 
-### 2. Backend Setup (Python)
-Ensure Python is installed, then run the following command to install the necessary Python libraries:
+### 2. Backend Setup (Python Dependencies)
+Ensure Python is installed, then run the following command in your terminal to install the necessary Python libraries for the backend script:
 ```bash
 pip install websockets pyautogui
 ```
